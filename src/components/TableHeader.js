@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import './TableHeader.css';
+var data = require('./data');
 
 class TableHeader extends Component {
   render() {
+
+    for(var i = 0; i < data.length; i++) {
+    var obj = data[i];
+
+    console.log(obj.organize + ", " + obj.sender + ", " + obj.domain + ", " + obj.email + ", " + obj.folder);
+  }
+
     return (
       <div className="container">
 
