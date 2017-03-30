@@ -31,7 +31,7 @@ class TableHeader extends Component {
                   <input type="checkbox" name="" value="" />
                 </th>
 
-                <th style={{backgroundColor: 'white'}}>Sender</th>
+                <th style={{backgroundColor: 'white'}}>Mark</th>
                 <th style={{backgroundColor: 'white'}}>Domain</th>
                 <th style={{backgroundColor: 'white'}}>Email</th>
                 <th style={{backgroundColor: 'white'}} className="bordercolor">
