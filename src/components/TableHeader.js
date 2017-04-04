@@ -8,7 +8,7 @@ class TableHeader extends Component {
     for(var i = 0; i < localdata.length; i++) {
     var obj = localdata[i];
 
-    //console.log(obj.organize + ", " + obj.sender + ", " + obj.domain + ", " + obj.email + ", " + obj.folder);
+    console.log(obj.organize + ", " + obj.sender + ", " + obj.domain + ", " + obj.email + ", " + obj.folder);
     }
   
     return (
