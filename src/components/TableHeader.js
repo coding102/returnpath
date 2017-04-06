@@ -4,12 +4,6 @@ import localdata from './data';
 
 class TableHeader extends Component {
     render() {
-
-    for(var i = 0; i < localdata.length; i++) {
-    var obj = localdata[i];
-
-    console.log(obj.organize + ", " + obj.sender + ", " + obj.domain + ", " + obj.email + ", " + obj.folder);
-    }
   
     return (
       <div className="container">
@@ -26,14 +20,16 @@ class TableHeader extends Component {
           </thead>
 
           <tbody>
-            <tr>
+          { localdata.map(obj => {
+            return (
+              <tr key={ obj.email } >
                 <td>
                   <input type="checkbox" name="" value="" />
                 </td>
 
-                {<td style={{backgroundColor: 'white'}}>
+                <td style={{backgroundColor: 'white'}}>
                   {obj.sender}
-                </td>}
+                </td>
 
 
                 <td style={{backgroundColor: 'white'}}>{obj.domain}</td>
@@ -45,7 +41,12 @@ class TableHeader extends Component {
                     <option>Finance</option>
                   </select>
                 </td>
-            </tr>
+              </tr>
+            )
+
+          })
+
+          }
           </tbody>
 
         </table>
